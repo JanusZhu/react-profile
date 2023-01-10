@@ -1,5 +1,10 @@
 import "./App.css";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  HashRouter,
+} from "react-router-dom";
 import { Home } from "./pages/Home";
 import { Profile } from "./pages/Profile";
 import { Count } from "./pages/Count";
@@ -18,14 +23,16 @@ function App() {
       <Provider store={store}>
         <AppContext.Provider value={{ name, setName }}>
           <Router>
-            <Navbar />
-            <Routes>
-              <Route path="/" element={<Home />}></Route>
-              <Route path="/profile" element={<Profile />}></Route>
-              <Route path="/count" element={<Count />}></Route>
-              <Route path="/logPage" element={<LogPage />}></Route>
-              <Route path="*" element={<h1>Page not found</h1>}></Route>
-            </Routes>
+            <HashRouter basename="/">
+              <Navbar />
+              <Routes>
+                <Route path="/" element={<Home />}></Route>
+                <Route path="/profile" element={<Profile />}></Route>
+                <Route path="/count" element={<Count />}></Route>
+                <Route path="/logPage" element={<LogPage />}></Route>
+                <Route path="*" element={<h1>Page not found</h1>}></Route>
+              </Routes>
+            </HashRouter>
           </Router>
         </AppContext.Provider>
       </Provider>
