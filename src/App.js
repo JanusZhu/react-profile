@@ -26,10 +26,16 @@ function App() {
             <HashRouter basename="/">
               <Navbar />
               <Routes>
-                <Route path="/" element={<Home />}></Route>
-                <Route path="/profile" element={<Profile />}></Route>
-                <Route path="/count" element={<Count />}></Route>
-                <Route path="/logPage" element={<LogPage />}></Route>
+                <Route path="/react-profile/" element={<Home />}></Route>
+                <Route
+                  path="/react-profile/profile"
+                  element={<Profile />}
+                ></Route>
+                <Route path="/react-profile/count" element={<Count />}></Route>
+                <Route
+                  path="/react-profile/logPage"
+                  element={<LogPage />}
+                ></Route>
                 <Route path="*" element={<h1>Page not found</h1>}></Route>
               </Routes>
             </HashRouter>
