@@ -20,7 +20,7 @@ function App() {
           <HashRouter>
             <Navbar />
             <Routes>
-              <Route path="/react-profile" element={<Home />}></Route>
+              <Route path="/" element={<Home />}></Route>
               <Route path="/profile" element={<Profile />}></Route>
               <Route path="/count" element={<Count />}></Route>
               <Route path="/logPage" element={<LogPage />}></Route>
