@@ -17,10 +17,10 @@ function App() {
     <div className="App">
       <Provider store={store}>
         <AppContext.Provider value={{ name, setName }}>
-          <HashRouter>
+          <HashRouter basename="/react-profile">
             <Navbar />
             <Routes>
-              <Route path="/" element={<Home />}></Route>
+              <Route exact_path="/react-profile" element={<Home />}></Route>
               <Route path="/profile" element={<Profile />}></Route>
               <Route path="/count" element={<Count />}></Route>
               <Route path="/logPage" element={<LogPage />}></Route>
